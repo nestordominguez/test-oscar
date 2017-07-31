@@ -16,11 +16,12 @@ module.exports = function (config) {
     exclude: [],
 
     plugins: [
-      require('karma-chrome-launcher'),
-      require('karma-jasmine'),
-      require('karma-sourcemap-loader'),
-      require('karma-spec-reporter'),
-      require('karma-webpack'),
+      'karma-chrome-launcher',
+      'karma-phantomjs-launcher',
+      'karma-jasmine',
+      'karma-sourcemap-loader',
+      'karma-spec-reporter',
+      'karma-webpack',
     ],
 
     // preprocess matching files before serving them to the browser
@@ -51,13 +52,14 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
 
     // toggle whether to watch files and rerun tests upon incurring changes
-    autoWatch: false,
+    autoWatch: true,
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    // PhantomJS, Chrome
+    browsers: ['PhantomJS'],
 
     // if true, Karma runs tests once and exits
-    singleRun: true,
+    singleRun: false,
   });
 };

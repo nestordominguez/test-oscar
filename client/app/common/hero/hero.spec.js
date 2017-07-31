@@ -1,16 +1,16 @@
-import ContactModule from './contact';
-import ContactController from './contact.controller';
-import ContactComponent from './contact.component';
-import ContactTemplate from './contact.html';
+import HeroModule from './hero';
+import HeroController from './hero.controller';
+import HeroComponent from './hero.component';
+import HeroTemplate from './hero.html';
 
-describe('Contact', () => {
+describe('Hero', () => {
   let $rootScope;
   let makeController;
 
-  beforeEach(window.module(ContactModule));
+  beforeEach(window.module(HeroModule));
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
-    makeController = () => new ContactController();
+    makeController = () => new HeroController();
   }));
 
   describe('Module', () => {
@@ -30,20 +30,20 @@ describe('Contact', () => {
     // template specs
     // tip: use regex to ensure correct bindings are used e.g., {{  }}
     it('has name in template [REMOVE]', () => {
-      expect(ContactTemplate).toMatch(/{{\s?\$ctrl\.name\s?}}/g);
+      expect(HeroTemplate).toMatch(/{{\s?\$ctrl\.name\s?}}/g);
     });
   });
 
   describe('Component', () => {
     // component/directive specs
-    const component = ContactComponent;
+    const component = HeroComponent;
 
     it('includes the intended template', () => {
-      expect(component.template).toEqual(ContactTemplate);
+      expect(component.template).toEqual(HeroTemplate);
     });
 
     it('invokes the right controller', () => {
-      expect(component.controller).toEqual(ContactController);
+      expect(component.controller).toEqual(HeroController);
     });
   });
 });
