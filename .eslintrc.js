@@ -19,6 +19,8 @@ module.exports = {
   },
   "globals": {
     "window": true,
+    "module": true,
+    "inject": true,
   },
   "env": {
     jasmine: true,

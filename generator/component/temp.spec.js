@@ -8,6 +8,7 @@ describe('<%= upCaseName %>', () => {
   let makeController;
 
   beforeEach(window.module(<%= upCaseName %>Module));
+
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
     makeController = () => new <%= upCaseName %>Controller();
