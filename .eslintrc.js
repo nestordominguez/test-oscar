@@ -18,9 +18,13 @@ module.exports = {
     "no-unused-expressions": ["error", { "allowShortCircuit": true }]
   },
   "globals": {
-    "window": true,
-    "module": true,
+    "_": true,
+    "angular": true,
+    "document": true,
+    "console": true,
     "inject": true,
+    "module": true,
+    "window": true,
   },
   "env": {
     jasmine: true,
