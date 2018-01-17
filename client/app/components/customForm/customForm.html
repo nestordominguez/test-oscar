@@ -1,0 +1,17 @@
+<div>
+  <h1>{{ $ctrl.name }}</h1>
+  <form name="myForm">
+    <label>
+      Enter your name:
+      <input type="text"
+             name="myName"
+             ng-model="form.name"
+             required="" />
+    </label>
+    <pre>myForm.myName.$error = {{ myForm.myName.$error | json }}</pre>
+
+    <div ng-messages="myForm.myName.$error" style="color:maroon" role="alert">
+      <div ng-message="required">You did not enter a field</div>
+    </div>
+  </form>
+</div>
